@@ -1,4 +1,7 @@
 /* styles.css */
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     padding-top: 56px;
@@ -42,7 +45,8 @@ header {
     background-color: #110129;
 }
 
-header h1, header p {
+header h1,
+header p {
     color: #ffffff;
 }
 
@@ -55,10 +59,45 @@ header h1 {
     0% {
         transform: translateY(0);
     }
+
     100% {
         transform: translateY(-10px);
     }
 }
+
+.rounded-btn {
+    margin: 4px;
+    font-size: 14px;
+    padding: 8px 16px;
+    border-radius: 7rem;
+    transition: background-color 0.3s ease-in-out;
+    /* Efecto de transición suave en el fondo */
+}
+
+.buttons {
+    background-color: #00ffcc;
+    border-color: #00ffcc;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.buttons:hover {
+    background-color: #004d40;
+    /* Cambia el color de fondo en el hover */
+    border-color: #004d40;
+    /* Cambia el color del borde en el hover */
+}
+
+.btn-icon {
+    vertical-align: middle;
+    margin-bottom: -0.3em;
+}
+
+.icons {
+    height: 1.6em;
+}
+
 
 section {
     padding: 60px 0;
