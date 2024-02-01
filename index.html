@@ -1,394 +1,499 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-..."
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    integrity="sha512-..." crossorigin="anonymous" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <title>Portfolio de Pablo Parcha</title>
+    <style>
+      body {
+        background: radial-gradient(
+          circle at 50% 0%,
+          rgb(50, 50, 50) 0%,
+          rgb(0, 0, 0) 90.2%
+        );
 
-  <title>Portfolio de Pablo Parcha</title>
-  <style>
-    body {
-      background-image: linear-gradient(0deg,
-          hsl(0deg 0% 0%) 0%,
-          hsl(344deg 0% 11%) 50%,
-          hsl(0deg 0% 20%) 100%);
-      margin: 0;
-      padding-top: 4rem;
-    }
-
-    header {
-      color: #fff;
-      text-align: center;
-      padding: 4rem 0;
-    }
-
-    nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 1000;
-      transition: background-color 0.3s, backdrop-filter 0.3s;
-    }
-
-    nav.blur {
-      backdrop-filter: blur(10px);
-    }
-
-
-    section#proyectos .project-card {
-      transition: transform 0.3s ease-in-out;
-      position: relative;
-      overflow: hidden;
-      border-radius: 1rem;
-    }
-
-    section#proyectos .project-card:hover {
-      transform: scale(1.05);
-    }
-
-    section#proyectos .project-card img {
-      object-fit: cover;
-      width: 100%;
-      height: 200px;
-      border-radius: 1rem 1rem 0 0;
-    }
-
-    section#proyectos .project-card .project-info {
-      padding: 1.5rem;
-      background-color: #1a1a1a;
-      color: #fff;
-      height: calc(100% - 200px);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    section#proyectos .project-card h3 {
-      font-size: 1.5rem;
-      font-weight: bold;
-      margin-bottom: 0.5rem;
-    }
-
-    section#proyectos .project-card p {
-      font-size: 1rem;
-      margin-bottom: 1rem;
-      line-height: 1.5;
-    }
-
-    section#proyectos .project-card a {
-      text-decoration: none;
-      color: #9f7aea;
-      font-weight: bold;
-      transition: color 0.3s ease;
-    }
-
-    section#proyectos .project-card a:hover {
-      color: #fff;
-    }
-
-    @keyframes titleAnimation {
-      0% {
-        transform: translateY(0);
+        margin: 0;
+        padding-top: 4rem;
       }
 
-      50% {
-        transform: translateY(-10px);
+      header {
+        color: #fff;
+        text-align: center;
+        padding: 4rem 0;
       }
 
-      100% {
-        transform: translateY(0);
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        transition: background-color 0.3s, backdrop-filter 0.3s;
       }
-    }
 
-    .name-animation {
-      animation: titleAnimation 4s infinite;
-    }
-  </style>
-</head>
+      nav.blur {
+        backdrop-filter: blur(10px);
+      }
 
-<body>
-  <header class="text-white py-16">
-    <div class="container mx-auto text-center">
-      <h1 class="text-5xl font-extrabold leading-tight">
-        ¡Hola, soy <span class="text-purple-500 name-animation inline-block">Pablo Parcha</span>!
-      </h1>
-      <p class="mt-4 text-xl">
-        Desarrollador Web | Diseñador Frontend
-      </p>
+      section#proyectos .project-card {
+        transition: transform 0.3s ease-in-out;
+        position: relative;
+        overflow: hidden;
+        border-radius: 1rem;
+      }
 
-      <!-- Botones de redes sociales y correo -->
-      <div class="flex justify-center items-center mt-10 space-x-6">
-        <!-- Botón de GitHub -->
-        <a href="https://github.com/tuusuario" target="_blank"
-          class="text-white hover:text-purple-500 transition duration-300">
-          <i class="fab fa-github-square text-3xl"></i>
-        </a>
+      section#proyectos .project-card:hover {
+        transform: scale(1.05);
+      }
 
-        <!-- Botón de LinkedIn -->
-        <a href="https://www.linkedin.com/in/tuperfil" target="_blank"
-          class="text-white hover:text-purple-500 transition duration-300">
-          <i class="fab fa-linkedin text-3xl"></i>
-        </a>
+      section#proyectos .project-card img {
+        object-fit: cover;
+        width: 100%;
+        height: 200px;
+        border-radius: 1rem 1rem 0 0;
+      }
 
-        <!-- Botón de Correo -->
-        <a href="mailto:tucorreo@example.com" class="text-white hover:text-purple-500 transition duration-300">
-          <i class="far fa-envelope text-3xl"></i>
-        </a>
-      </div>
-    </div>
-  </header>
+      section#proyectos .project-card .project-info {
+        padding: 1.5rem;
+        background-color: #1a1a1a;
+        color: #fff;
+        height: calc(100% - 200px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
 
+      section#proyectos .project-card h3 {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+      }
 
-  <nav class="p-4 font-sans">
-    <div class="container mx-auto flex justify-between items-center">
-      <h1 class="text-3xl font-extrabold text-white flex items-center">
-        <i class="fas fa-code text-purple-500 mr-2"></i> Pablo Parcha
-      </h1>
-      <div class="hidden md:flex space-x-4">
-        <a href="#proyectos" class="text-white hover:text-purple-500 transition duration-300 flex items-center">
-          <i class="fas fa-laptop-code mr-2"></i> Proyectos
-        </a>
-        <a href="#habilidades" class="text-white hover:text-purple-500 transition duration-300 flex items-center">
-          <i class="fas fa-tools mr-2"></i> Habilidades
-        </a>
-        <a href="#contacto" class="text-white hover:text-purple-500 transition duration-300 flex items-center">
-          <i class="fas fa-envelope mr-2"></i> Contacto
-        </a>
-      </div>
-      <!-- Botón de menú para dispositivos móviles -->
-      <div class="md:hidden">
-        <button id="menu-toggle" class="text-white focus:outline-none">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-          </svg>
-        </button>
-      </div>
-    </div>
-    <!-- Menú desplegable para dispositivos móviles -->
-    <div id="mobile-menu" class="md:hidden hidden bg-purple-800">
-      <a href="#sobre-mi" class="block p-3 text-white hover:text-purple-500 transition duration-300">Sobre Mí</a>
-      <a href="#proyectos" class="block p-3 text-white hover:text-purple-500 transition duration-300">Proyectos</a>
-      <a href="#habilidades" class="block p-3 text-white hover:text-purple-500 transition duration-300">Habilidades</a>
-      <a href="#contacto" class="block p-3 text-white hover:text-purple-500 transition duration-300">Contacto</a>
-    </div>
-  </nav>
+      section#proyectos .project-card p {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        line-height: 1.5;
+      }
 
-  <!-- Script para el menú desplegable en dispositivos móviles -->
-  <script>
-    document
-      .getElementById("menu-toggle")
-      .addEventListener("click", function () {
-        document.getElementById("mobile-menu").classList.toggle("hidden");
-      });
+      section#proyectos .project-card a {
+        text-decoration: none;
+        color: #9f7aea;
+        font-weight: bold;
+        transition: color 0.3s ease;
+      }
 
-    // Cambiar la apariencia del menú al hacer scroll
-    window.addEventListener("scroll", function () {
-      var nav = document.querySelector("nav");
-      nav.classList.toggle("blur", window.scrollY > 0);
-    });
-  </script>
+      section#proyectos .project-card a:hover {
+        color: #fff;
+      }
 
-  <section id="proyectos" class="py-16">
-    <div class="container mx-auto">
-      <h2 class="text-4xl text-white font-bold mb-8">Proyectos</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Proyecto 1 -->
-        <div class="bg-gray-800 rounded-lg overflow-hidden project-card">
-          <img src="https://via.placeholder.com/800x400" alt="Proyecto 1" class="w-full h-48 object-cover" />
-          <div class="project-info">
-            <h3>Proyecto 1</h3>
-            <p>
-              Descripción del proyecto. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
-            <a href="#" class="mt-2 flex items-center text-purple-500">
-              <i class="fas fa-arrow-circle-right text-purple-500 mr-1"></i> Ver más
-            </a>
-          </div>
-        </div>
+      @keyframes titleAnimation {
+        0% {
+          transform: translateY(0);
+        }
 
-        <!-- Proyecto 2 -->
-        <div class="bg-gray-800 rounded-lg overflow-hidden project-card">
-          <img src="https://via.placeholder.com/800x400" alt="Proyecto 2" class="w-full h-48 object-cover" />
-          <div class="project-info">
-            <h3>Proyecto 2</h3>
-            <p>
-              Descripción del proyecto. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
-            <a href="#" class="mt-2 flex items-center text-purple-500">
-              <i class="fas fa-arrow-circle-right text-purple-500 mr-1"></i> Ver más
-            </a>
-          </div>
-        </div>
+        50% {
+          transform: translateY(-10px);
+        }
 
-        <!-- Proyecto 3 -->
-        <div class="bg-gray-800 rounded-lg overflow-hidden project-card">
-          <img src="https://via.placeholder.com/800x400" alt="Proyecto 3" class="w-full h-48 object-cover" />
-          <div class="project-info">
-            <h3>Proyecto 3</h3>
-            <p>
-              Descripción del proyecto. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
-            <a href="#" class="mt-2 flex items-center text-purple-500">
-              <i class="fas fa-arrow-circle-right text-purple-500 mr-1"></i> Ver más
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+        100% {
+          transform: translateY(0);
+        }
+      }
 
-  <section id="habilidades" class="py-16 bg-dark text-white">
-    <div class="container mx-auto">
-      <h2 class="text-5xl font-bold mb-8 text-white">Habilidades</h2>
+      .name-animation {
+        animation: titleAnimation 4s infinite;
+      }
+    </style>
+  </head>
 
-      <!-- Tecnologías -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="bg-purple-800 p-6 rounded-lg transition duration-300 transform hover:scale-105">
-          <h3 class="text-3xl font-bold mb-4 text-purple-500">Tecnologías</h3>
-          <ul class="list-disc pl-4">
-            <li class="flex items-center mb-2 text-xl">
-              <i class="fab fa-html5 text-purple-500 mr-2"></i> HTML5
-            </li>
-            <li class="flex items-center mb-2 text-xl">
-              <i class="fab fa-css3 text-purple-500 mr-2"></i> CSS3
-            </li>
-            <li class="flex items-center mb-2 text-xl">
-              <i class="fab fa-js text-purple-500 mr-2"></i> JavaScript
-            </li>
-            <li class="flex items-center mb-2 text-xl">
-              <i class="fab fa-php text-purple-500 mr-2"></i> PHP
-            </li>
-          </ul>
-        </div>
+  <body>
+    <header class="text-white py-16">
+      <div class="container mx-auto text-center">
+        <h1 class="text-5xl font-extrabold leading-tight">
+          ¡Hola, soy
+          <span class="text-purple-500 name-animation inline-block"
+            >Pablo Parcha</span
+          >!
+        </h1>
+        <p class="mt-4 text-xl">Desarrollador Web | Diseñador Frontend</p>
 
-        <!-- Frameworks -->
-        <div class="bg-purple-800 p-6 rounded-lg transition duration-300 transform hover:scale-105">
-          <h3 class="text-3xl font-bold mb-4 text-purple-500">Frameworks</h3>
-          <ul class="list-disc pl-4">
-            <li class="flex items-center mb-2 text-xl">
-              <i class="fab fa-html5 text-purple-500 mr-2"></i> Tailwind CSS
-            </li>
-            <li class="flex items-center mb-2 text-xl">
-              <i class="fab fa-bootstrap text-purple-500 mr-2"></i> Bootstrap
-            </li>
-            <li class="flex items-center mb-2 text-xl">
-              <i class="fab fa-react text-purple-500 mr-2"></i> React.js
-            </li>
-          </ul>
-        </div>
-
-        <!-- Otros -->
-        <div class="bg-purple-800 p-6 rounded-lg transition duration-300 transform hover:scale-105">
-          <h3 class="text-3xl font-bold mb-4 text-purple-500">Otros</h3>
-          <ul class="list-disc pl-4">
-            <li class="flex items-center mb-2 text-xl">
-              <i class="fab fa-git-alt text-purple-500 mr-2"></i> Control de Versiones (Git)
-            </li>
-            <li class="flex items-center mb-2 text-xl">
-              <i class="fab fa-github text-purple-500 mr-2"></i> GitHub
-            </li>
-            <li class="flex items-center mb-2 text-xl">
-              <i class="fab fa-gitlab text-purple-500 mr-2"></i> GitLab
-            </li>
-            <li class="flex items-center mb-2 text-xl">
-              <i class="fas fa-mobile-alt text-purple-500 mr-2"></i> Responsive Design
-            </li>
-          </ul>
-
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="experiencia" class="py-16 bg-dark text-white">
-    <div class="container mx-auto">
-      <h2 class="text-4xl font-bold mb-8 text-left">Experiencia</h2>
-
-      <!-- Experiencia 1 -->
-      <div class="mb-8 border-l-4 border-purple-500 pl-4">
-        <h3 class="text-2xl font-bold mb-2 flex items-center">
-          <i class="fas fa-briefcase mr-2 text-purple-500"></i> Desarrollador Web Senior
-        </h3>
-        <p class="text-gray-300">Empresa XYZ | Ciudad, País | Enero 2020 - Presente</p>
-        <p class="mt-2">
-          Responsabilidades y logros destacados en esta posición. Descripción detallada de las tareas y proyectos
-          manejados.
-        </p>
-      </div>
-
-      <!-- Experiencia 2 -->
-      <div class="mb-8 border-l-4 border-purple-500 pl-4">
-        <h3 class="text-2xl font-bold mb-2 flex items-center">
-          <i class="fas fa-briefcase mr-2 text-purple-500"></i> Diseñador Frontend
-        </h3>
-        <p class="text-gray-300">Compañía ABC | Ciudad, País | Mayo 2018 - Diciembre 2019</p>
-        <p class="mt-2">
-          Descripción de las responsabilidades y proyectos significativos llevados a cabo durante este período.
-        </p>
-      </div>
-
-      <!-- Experiencia 3 -->
-      <div class="mb-8 border-l-4 border-purple-500 pl-4">
-        <h3 class="text-2xl font-bold mb-2 flex items-center">
-          <i class="fas fa-briefcase mr-2 text-purple-500"></i> Pasante en Desarrollo Web
-        </h3>
-        <p class="text-gray-300">Estudio DEF | Ciudad, País | Septiembre 2017 - Abril 2018</p>
-        <p class="mt-2">
-          Contribuciones y aprendizajes adquiridos durante el periodo de pasantía. Proyectos en los que se participó.
-        </p>
-      </div>
-
-      <!-- Puedes agregar más bloques de experiencia según sea necesario -->
-    </div>
-  </section>
-
-  <footer class="bg-dark text-white py-16">
-    <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <!-- Información de contacto -->
-      <div>
-        <h2 class="text-4xl font-bold mb-4">Contacto</h2>
-        <p class="text-gray-300">
-          ¡Estoy disponible para nuevas oportunidades y colaboraciones!
-          Contáctame a través del siguiente formulario o mediante mis redes sociales.
-        </p>
-      </div>
-
-      <!-- Formulario de contacto -->
-      <div>
-        <h2 class="text-4xl font-bold mb-4">Formulario de Contacto</h2>
-        <!-- Agrega aquí tu formulario de contacto -->
-        <form action="#" method="post">
-          <!-- Campos del formulario -->
-          <!-- ... -->
-          <button type="submit" class="bg-purple-500 text-white px-4 py-2 rounded-full mt-4">
-            Enviar Mensaje
-          </button>
-        </form>
-      </div>
-
-      <!-- Redes Sociales -->
-      <div>
-        <h2 class="text-4xl font-bold mb-4">Redes Sociales</h2>
-        <div class="flex space-x-4">
-          <!-- Agrega enlaces a tus perfiles de redes sociales con iconos de Font Awesome -->
-          <a href="#" class="text-white hover:text-purple-500 transition duration-300">
-            <i class="fab fa-twitter-square text-3xl"></i>
-          </a>
-          <a href="#" class="text-white hover:text-purple-500 transition duration-300">
-            <i class="fab fa-linkedin text-3xl"></i>
-          </a>
-          <a href="#" class="text-white hover:text-purple-500 transition duration-300">
+        <!-- Botones de redes sociales y correo -->
+        <div class="flex justify-center items-center mt-10 space-x-6">
+          <!-- Botón de GitHub -->
+          <a
+            href="https://github.com/tuusuario"
+            target="_blank"
+            class="text-white hover:text-purple-500 transition duration-300"
+          >
             <i class="fab fa-github-square text-3xl"></i>
           </a>
+
+          <!-- Botón de LinkedIn -->
+          <a
+            href="https://www.linkedin.com/in/tuperfil"
+            target="_blank"
+            class="text-white hover:text-purple-500 transition duration-300"
+          >
+            <i class="fab fa-linkedin text-3xl"></i>
+          </a>
+
+          <!-- Botón de Correo -->
+          <a
+            href="mailto:tucorreo@example.com"
+            class="text-white hover:text-purple-500 transition duration-300"
+          >
+            <i class="far fa-envelope text-3xl"></i>
+          </a>
         </div>
       </div>
-    </div>
-  </footer>
-</body>
+    </header>
 
+    <nav class="p-4 font-sans">
+      <div class="container mx-auto flex justify-between items-center">
+        <h1 class="text-3xl font-extrabold text-white flex items-center">
+          <i class="fas fa-code text-purple-500 mr-2"></i> Pablo Parcha
+        </h1>
+        <div class="hidden md:flex space-x-4">
+          <a
+            href="#proyectos"
+            class="text-white hover:text-purple-500 transition duration-300 flex items-center"
+          >
+            <i class="fas fa-laptop-code mr-2"></i> Proyectos
+          </a>
+          <a
+            href="#habilidades"
+            class="text-white hover:text-purple-500 transition duration-300 flex items-center"
+          >
+            <i class="fas fa-tools mr-2"></i> Habilidades
+          </a>
+          <a
+            href="#contacto"
+            class="text-white hover:text-purple-500 transition duration-300 flex items-center"
+          >
+            <i class="fas fa-envelope mr-2"></i> Contacto
+          </a>
+        </div>
+        <!-- Botón de menú para dispositivos móviles -->
+        <div class="md:hidden">
+          <button id="menu-toggle" class="text-white focus:outline-none">
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <!-- Menú desplegable para dispositivos móviles -->
+      <div id="mobile-menu" class="md:hidden hidden bg-purple-800">
+        <a
+          href="#sobre-mi"
+          class="block p-3 text-white hover:text-purple-500 transition duration-300"
+          >Sobre Mí</a
+        >
+        <a
+          href="#proyectos"
+          class="block p-3 text-white hover:text-purple-500 transition duration-300"
+          >Proyectos</a
+        >
+        <a
+          href="#habilidades"
+          class="block p-3 text-white hover:text-purple-500 transition duration-300"
+          >Habilidades</a
+        >
+        <a
+          href="#contacto"
+          class="block p-3 text-white hover:text-purple-500 transition duration-300"
+          >Contacto</a
+        >
+      </div>
+    </nav>
+
+    <!-- Script para el menú desplegable en dispositivos móviles -->
+    <script>
+      document
+        .getElementById("menu-toggle")
+        .addEventListener("click", function () {
+          document.getElementById("mobile-menu").classList.toggle("hidden");
+        });
+
+      // Cambiar la apariencia del menú al hacer scroll
+      window.addEventListener("scroll", function () {
+        var nav = document.querySelector("nav");
+        nav.classList.toggle("blur", window.scrollY > 0);
+      });
+    </script>
+
+    <section id="proyectos" class="py-16">
+      <div class="container mx-auto">
+        <h2 class="text-4xl text-white font-bold mb-8">Proyectos</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Proyecto 1 -->
+          <div class="bg-gray-800 rounded-lg overflow-hidden project-card">
+            <img
+              src="https://via.placeholder.com/800x400"
+              alt="Proyecto 1"
+              class="w-full h-48 object-cover"
+            />
+            <div class="project-info">
+              <h3>Proyecto 1</h3>
+              <p>
+                Descripción del proyecto. Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit.
+              </p>
+              <a href="#" class="mt-2 flex items-center text-purple-500">
+                <i class="fas fa-arrow-circle-right text-purple-500 mr-1"></i>
+                Ver más
+              </a>
+            </div>
+          </div>
+
+          <!-- Proyecto 2 -->
+          <div class="bg-gray-800 rounded-lg overflow-hidden project-card">
+            <img
+              src="https://via.placeholder.com/800x400"
+              alt="Proyecto 2"
+              class="w-full h-48 object-cover"
+            />
+            <div class="project-info">
+              <h3>Proyecto 2</h3>
+              <p>
+                Descripción del proyecto. Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit.
+              </p>
+              <a href="#" class="mt-2 flex items-center text-purple-500">
+                <i class="fas fa-arrow-circle-right text-purple-500 mr-1"></i>
+                Ver más
+              </a>
+            </div>
+          </div>
+
+          <!-- Proyecto 3 -->
+          <div class="bg-gray-800 rounded-lg overflow-hidden project-card">
+            <img
+              src="https://via.placeholder.com/800x400"
+              alt="Proyecto 3"
+              class="w-full h-48 object-cover"
+            />
+            <div class="project-info">
+              <h3>Proyecto 3</h3>
+              <p>
+                Descripción del proyecto. Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit.
+              </p>
+              <a href="#" class="mt-2 flex items-center text-purple-500">
+                <i class="fas fa-arrow-circle-right text-purple-500 mr-1"></i>
+                Ver más
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="habilidades" class="py-16 bg-dark text-white">
+      <div class="container mx-auto">
+        <h2 class="text-5xl font-bold mb-8 text-white">Habilidades</h2>
+
+        <!-- Tecnologías -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
+            class="bg-purple-800 p-6 rounded-lg transition duration-300 transform hover:scale-105"
+          >
+            <h3 class="text-3xl font-bold mb-4 text-purple-500">Tecnologías</h3>
+            <ul class="list-disc pl-4">
+              <li class="flex items-center mb-2 text-xl">
+                <i class="fab fa-html5 text-purple-500 mr-2"></i> HTML5
+              </li>
+              <li class="flex items-center mb-2 text-xl">
+                <i class="fab fa-css3 text-purple-500 mr-2"></i> CSS3
+              </li>
+              <li class="flex items-center mb-2 text-xl">
+                <i class="fab fa-js text-purple-500 mr-2"></i> JavaScript
+              </li>
+              <li class="flex items-center mb-2 text-xl">
+                <i class="fab fa-php text-purple-500 mr-2"></i> PHP
+              </li>
+            </ul>
+          </div>
+
+          <!-- Frameworks -->
+          <div
+            class="bg-purple-800 p-6 rounded-lg transition duration-300 transform hover:scale-105"
+          >
+            <h3 class="text-3xl font-bold mb-4 text-purple-500">Frameworks</h3>
+            <ul class="list-disc pl-4">
+              <li class="flex items-center mb-2 text-xl">
+                <i class="fab fa-html5 text-purple-500 mr-2"></i> Tailwind CSS
+              </li>
+              <li class="flex items-center mb-2 text-xl">
+                <i class="fab fa-bootstrap text-purple-500 mr-2"></i> Bootstrap
+              </li>
+              <li class="flex items-center mb-2 text-xl">
+                <i class="fab fa-react text-purple-500 mr-2"></i> React.js
+              </li>
+            </ul>
+          </div>
+
+          <!-- Otros -->
+          <div
+            class="bg-purple-800 p-6 rounded-lg transition duration-300 transform hover:scale-105"
+          >
+            <h3 class="text-3xl font-bold mb-4 text-purple-500">Otros</h3>
+            <ul class="list-disc pl-4">
+              <li class="flex items-center mb-2 text-xl">
+                <i class="fab fa-git-alt text-purple-500 mr-2"></i> Control de
+                Versiones (Git)
+              </li>
+              <li class="flex items-center mb-2 text-xl">
+                <i class="fab fa-github text-purple-500 mr-2"></i> GitHub
+              </li>
+              <li class="flex items-center mb-2 text-xl">
+                <i class="fab fa-gitlab text-purple-500 mr-2"></i> GitLab
+              </li>
+              <li class="flex items-center mb-2 text-xl">
+                <i class="fas fa-mobile-alt text-purple-500 mr-2"></i>
+                Responsive Design
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experiencia" class="py-16 bg-dark text-white">
+      <div class="container mx-auto">
+        <h2 class="text-4xl font-bold mb-8 text-left">Experiencia</h2>
+
+        <!-- Experiencia 1 -->
+        <div class="mb-8 border-l-4 border-purple-500 pl-4">
+          <h3 class="text-2xl font-bold mb-2 flex items-center">
+            <i class="fas fa-briefcase mr-2 text-purple-500"></i> Desarrollador
+            Web Senior
+          </h3>
+          <p class="text-gray-300">
+            Empresa XYZ | Ciudad, País | Enero 2020 - Presente
+          </p>
+          <p class="mt-2">
+            Responsabilidades y logros destacados en esta posición. Descripción
+            detallada de las tareas y proyectos manejados.
+          </p>
+        </div>
+
+        <!-- Experiencia 2 -->
+        <div class="mb-8 border-l-4 border-purple-500 pl-4">
+          <h3 class="text-2xl font-bold mb-2 flex items-center">
+            <i class="fas fa-briefcase mr-2 text-purple-500"></i> Diseñador
+            Frontend
+          </h3>
+          <p class="text-gray-300">
+            Compañía ABC | Ciudad, País | Mayo 2018 - Diciembre 2019
+          </p>
+          <p class="mt-2">
+            Descripción de las responsabilidades y proyectos significativos
+            llevados a cabo durante este período.
+          </p>
+        </div>
+
+        <!-- Experiencia 3 -->
+        <div class="mb-8 border-l-4 border-purple-500 pl-4">
+          <h3 class="text-2xl font-bold mb-2 flex items-center">
+            <i class="fas fa-briefcase mr-2 text-purple-500"></i> Pasante en
+            Desarrollo Web
+          </h3>
+          <p class="text-gray-300">
+            Estudio DEF | Ciudad, País | Septiembre 2017 - Abril 2018
+          </p>
+          <p class="mt-2">
+            Contribuciones y aprendizajes adquiridos durante el periodo de
+            pasantía. Proyectos en los que se participó.
+          </p>
+        </div>
+
+        <!-- Puedes agregar más bloques de experiencia según sea necesario -->
+      </div>
+    </section>
+
+    <footer class="bg-dark text-white py-16">
+      <div
+        class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+      >
+        <!-- Información de contacto -->
+        <div>
+          <h2 class="text-4xl font-bold mb-4">Contacto</h2>
+          <p class="text-gray-300">
+            ¡Estoy disponible para nuevas oportunidades y colaboraciones!
+            Contáctame a través del siguiente formulario o mediante mis redes
+            sociales.
+          </p>
+        </div>
+
+        <!-- Formulario de contacto -->
+        <div>
+          <h2 class="text-4xl font-bold mb-4">Formulario de Contacto</h2>
+          <!-- Agrega aquí tu formulario de contacto -->
+          <form action="#" method="post">
+            <!-- Campos del formulario -->
+            <!-- ... -->
+            <button
+              type="submit"
+              class="bg-purple-500 text-white px-4 py-2 rounded-full mt-4"
+            >
+              Enviar Mensaje
+            </button>
+          </form>
+        </div>
+
+        <!-- Redes Sociales -->
+        <div>
+          <h2 class="text-4xl font-bold mb-4">Redes Sociales</h2>
+          <div class="flex space-x-4">
+            <!-- Agrega enlaces a tus perfiles de redes sociales con iconos de Font Awesome -->
+            <a
+              href="#"
+              class="text-white hover:text-purple-500 transition duration-300"
+            >
+              <i class="fab fa-twitter-square text-3xl"></i>
+            </a>
+            <a
+              href="#"
+              class="text-white hover:text-purple-500 transition duration-300"
+            >
+              <i class="fab fa-linkedin text-3xl"></i>
+            </a>
+            <a
+              href="#"
+              class="text-white hover:text-purple-500 transition duration-300"
+            >
+              <i class="fab fa-github-square text-3xl"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
