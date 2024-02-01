@@ -77,7 +77,17 @@
         flex-direction: column;
         justify-content: space-between;
       }
+      /* Estilos para el contenedor de iconos */
+      section#proyectos .project-card .project-icons {
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+      }
 
+      section#proyectos .project-card .project-icons i {
+        font-size: 1.5rem; /* Ajusta el tamaño según tus preferencias */
+        color: white; /* Cambia a blanco para que sea visible en el fondo oscuro */
+      }
       section#proyectos .project-card h3 {
         font-size: 1.5rem;
         font-weight: bold;
@@ -250,24 +260,38 @@
 
     <section id="proyectos" class="py-16">
       <div class="container mx-auto">
-        <h2 class="text-4xl text-white font-bold mb-8">Proyectos</h2>
+        <h2 class="text-5xl font-bold mb-8 text-white">Proyectos Recientes</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <!-- Proyecto 1 -->
-          <div class="bg-gray-800 rounded-lg overflow-hidden project-card">
+          <div
+            class="relative bg-gray-800 rounded-lg overflow-hidden project-card"
+          >
             <img
-              src="https://via.placeholder.com/800x400"
+              src="./Assets/50shots_so.png"
               alt="Proyecto 1"
               class="w-full h-48 object-cover"
             />
-            <div class="project-info">
-              <h3>Proyecto 1</h3>
+            <div class="project-info relative">
+              <h3>Marina Parcha - Enfermera a domicilio</h3>
               <p>
                 Descripción del proyecto. Lorem ipsum dolor sit amet,
                 consectetur adipiscing elit.
               </p>
-              <a href="#" class="mt-2 flex items-center text-purple-500">
+              <a
+                href="#"
+                class="mt-2 flex items-center text-purple-500 relative"
+              >
                 <i class="fas fa-arrow-circle-right text-purple-500 mr-1"></i>
                 Ver más
+                <i
+                  class="absolute bottom-0 right-0 fab fa-html5 text-white-500"
+                ></i>
+                <i
+                  class="absolute bottom-0 right-8 fab fa-css3 text-white-500"
+                ></i>
+                <i
+                  class="absolute bottom-0 right-16 fab fa-js text-white-500"
+                ></i>
               </a>
             </div>
           </div>
@@ -311,6 +335,16 @@
               </a>
             </div>
           </div>
+        </div>
+
+        <!-- Botón "Ver todos los proyectos" -->
+        <div class="mt-8 flex justify-center">
+          <button
+            class="bg-gradient-to-r from-purple-500 to-indigo-600 text-white px-8 py-3 rounded-full flex items-center space-x-2 hover:shadow-xl transform hover:scale-105 transition-all duration-300 focus:outline-none hover:from-purple-600 hover:to-indigo-700 hover:animate-bounce font-sans"
+          >
+            <i class="fas fa-folder-open text-lg"></i>
+            <span class="font-semibold text-lg">Ver más proyectos</span>
+          </button>
         </div>
       </div>
     </section>
@@ -387,7 +421,7 @@
 
     <section id="experiencia" class="py-16 bg-dark text-white">
       <div class="container mx-auto">
-        <h2 class="text-4xl font-bold mb-8 text-left">Experiencia</h2>
+        <h2 class="text-5xl font-bold mb-8 text-white">Experiencia</h2>
 
         <!-- Experiencia 1 -->
         <div class="mb-8 border-l-4 border-purple-500 pl-4">
