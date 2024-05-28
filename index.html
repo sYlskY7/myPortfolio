@@ -18,7 +18,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
-
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+    />
     <title>Portfolio de Pablo Parcha</title>
     <style>
       body {
@@ -261,7 +264,14 @@
       });
     </script>
 
-    <section id="proyectos" class="py-16 px-24">
+    <section
+      id="proyectos"
+      class="py-16 px-24"
+      data-aos="fade-up"
+      data-aos-offset="200"
+      data-aos-delay="50"
+      data-aos-duration="1000"
+    >
       <div class="container mx-auto">
         <h2 class="text-5xl font-bold mb-8 text-white">Proyectos</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -372,7 +382,14 @@
       </div>
     </section>
 
-    <section id="habilidades" class="py-16 px-24 text-white">
+    <section
+      id="habilidades"
+      class="py-16 px-24 text-white"
+      data-aos="fade-up"
+      data-aos-offset="200"
+      data-aos-delay="50"
+      data-aos-duration="1000"
+    >
       <div class="container mx-auto">
         <h2 class="text-5xl font-bold mb-8 text-white">Habilidades</h2>
 
@@ -445,7 +462,14 @@
       </div>
     </section>
 
-    <section id="experiencia" class="py-16 px-24 text-white">
+    <section
+      id="experiencia"
+      class="py-16 px-24 text-white"
+      data-aos="fade-up"
+      data-aos-offset="200"
+      data-aos-delay="50"
+      data-aos-duration="1000"
+    >
       <div class="container mx-auto">
         <h2 class="text-5xl font-bold mb-8 text-white">Experiencia</h2>
 
@@ -471,8 +495,8 @@
             Web
           </h3>
           <p class="text-gray-300">
-            <b>IES Augusto González Linares</b> | Santander, España |
-            Septiembre 2022 - Abril 2024
+            <b>IES Augusto González Linares</b> | Santander, España | Septiembre
+            2022 - Abril 2024
           </p>
           <p class="mt-2">
             Descripción de las responsabilidades y proyectos significativos
@@ -540,5 +564,51 @@
         </div>
       </div>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+    <script>
+      // Inicializar AOS
+      AOS.init({
+        duration: 1000,
+        easing: "ease",
+      });
+      function smoothScroll(target, duration) {
+        var targetElement = document.querySelector(target);
+        var targetPosition = targetElement.getBoundingClientRect().top;
+        var startPosition = window.pageYOffset;
+        var distance = targetPosition - startPosition;
+        var startTime = null;
+
+        function animation(currentTime) {
+          if (startTime === null) startTime = currentTime;
+          var timeElapsed = currentTime - startTime;
+          var run = ease(timeElapsed, startPosition, distance, duration);
+          window.scrollTo(0, run);
+          if (timeElapsed < duration) requestAnimationFrame(animation);
+        }
+
+        // Función para calcular el scroll suave
+        function ease(t, b, c, d) {
+          t /= d / 2;
+          if (t < 1) return (c / 2) * t * t + b;
+          t--;
+          return (-c / 2) * (t * (t - 2) - 1) + b;
+        }
+
+        requestAnimationFrame(animation);
+      }
+
+      // Event listener para el clic en los enlaces del menú
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          var target = this.getAttribute("href");
+          smoothScroll(target, 1000);
+        });
+      });
+    </script>
   </body>
 </html>
